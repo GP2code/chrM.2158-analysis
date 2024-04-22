@@ -7,7 +7,7 @@
 **Last Updated:** April 2024 
 
 ## Summary
-This is the online repository for the short report titled ***"Investigating the Protective Role of the Mitochondrial 2158 T > C Variant in Parkinson’s Disease"***. This study aims to question the protective effect of a rare variant against Parkinson's disease in GP2 (release 6), AllofUs, AMP-PD, and GenomicsEngland.
+This is the online repository for the short report titled ***"Investigating the Protective Role of the Mitochondrial 2158 T > C Variant in Parkinson’s Disease"***. This study aims to question the protective effect of a rare variant against Parkinson's disease in GP2, AllofUs, AMP-PD, and GenomicsEngland.
 
 ### Data Statement 
 * All GP2 data are hosted in collaboration with the Accelerating Medicines Partnership in Parkinson's Disease and are available via application on the website. The GP2 PD case and control data are available via the GP2 website (https://gp2.org; release 6: https://doi.org/10.5281/zenodo.10472143). Genotyping imputation, quality control, ancestry prediction, and processing were performed using GenoTools (v1.0.0), publicly available on GitHub
@@ -25,6 +25,21 @@ This is the online repository for the short report titled ***"Investigating the 
 - The `analyses/` directory includes all analyses discussed in the manuscript
     - `GP2/` includes 2 notebooks on processing and analyzing GP2 monogenic data from release 6
 
+```
+THIS_REPO
+├── README.md
+└── analyses
+    ├── AMP-PD
+    │   └── 00_AMPPD_Data_Prep.ipynb
+    ├── AllOfUs
+    │   ├── 00_AoU_Prep_Analysis_Controlsover70.ipynb
+    │   ├── 01_AoU_Prep_Analysis_Cases.ipynb
+    │   └── 02_AoU_Prep_Analysis_MaternalProxies.ipynb
+    └── GP2
+        ├── 00_GP2_Data_Prep.ipynb
+        └── 01_GP2_Analysis.ipynb
+```
+
 ---
 ### Analysis Notebooks
 * Languages: Python, bash, and R
@@ -33,7 +48,10 @@ This is the online repository for the short report titled ***"Investigating the 
 |---------------|------------------|------------------------------------|
 | GP2/          | 00_GP2_Data_Prep | Downloading and structuring data   |
 |               | 01_GP2_Analysis  | Running regression adjusted by PCs |
-|               | ...additional    | ...more details soon               |
+| AllOfUs/          | 00_AoU_Prep_Analysis_Controlsover70 | Querying and processing crams for neurologically healthy controls >70 + analysis  |
+|           | 01_AoU_Prep_Analysis_Cases | Querying and processing crams for PD cases + analysis   |
+|           | 02_AoU_Prep_Analysis_MaternalProxies | Querying and processing crams for maternal proxy PD cases + analysis  |
+| AMP-PD/          | 00_AMPPD_Data_Prep | Downloading and structuring data from AMP-PD  |
 
 ---
 
